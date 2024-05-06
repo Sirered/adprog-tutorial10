@@ -14,6 +14,6 @@ The reason as to why the hey hey occured before the howdy, is due to the fact th
 The executor.run() use a while loop to iterate through all of the tasks that were spawned and initiate them, however it does not have to wait for one task to complete before initiating the next. Because of this, he initiates all 3 tasks asynchronously without any delay, thus printing all of the howdy's at once, then only after each of those threads have waited 2 seconds, do they all print out all the dones at once.
 
 ## Remove drop
-![image](https://github.com/Sirered/adprog-tutorial10/assets/126568984/e45a2ec3-1c84-4156-8735-9e33daa4e539)
+![image](https://github.com/Sirered/adprog-tutorial10/assets/126568984/682a9893-b553-4124-ab7d-bec294f90834)
 
 From here, we see that even after all of the tasks were run, the program isn't terminating. This is because there is still a thread holding the spawner that is keeping the spawner and thus the entire program alive. If we don't drop spawner and let it be, the thread and program will continue to run.
